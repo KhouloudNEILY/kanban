@@ -53,7 +53,7 @@ const addTask= async function (req, res) {
   };
   
 const deleteTask= async function (req, res) {
-    const todo={taskname:req.body.taskname}
+    const todo={id:req.body.id}
     try {
       const task = await Task.deleteOne(todo);
       res.status(201).send(task);
